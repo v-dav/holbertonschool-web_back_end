@@ -1,4 +1,4 @@
-# :snake: Python - Variable Annotations
+# :snake: Python - Async
 
 ## 📖 Learning objectives
 At the end of this project, I'am expected to be able to explain to anyone:
