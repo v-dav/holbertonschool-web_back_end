@@ -56,9 +56,6 @@ class Server:
             else:
                 next_index += 1
 
-        # if next_index >= len(whole_data):
-        #     next_index = None
-
         return {
             "index": index,
             "next_index": next_index,
