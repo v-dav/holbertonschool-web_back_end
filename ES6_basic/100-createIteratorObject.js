@@ -15,7 +15,7 @@ export default function createIteratorObject(report) {
           if (departmentIndex < Object.keys(report.allEmployees).length) {
             if (employeeIndex < department.length) {
               const employee = department[employeeIndex];
-              employeeIndex++;
+              employeeIndex += 1;
               return {
                 value: employee,
                 done: false,
@@ -23,7 +23,7 @@ export default function createIteratorObject(report) {
             }
             // go to next department
             employeeIndex = 0;
-            departmentIndex++;
+            departmentIndex += 1;
             return this.next();
           }
           return {
