@@ -1,10 +1,11 @@
 export default function iterateThroughObject(reportWithIterator) {
   let employeesString = '';
-  const lastIndex = reportWithIterator.length - 1;
+  const employeesArray = Array.from(reportWithIterator);
+  const lastIndex = employeesArray.length - 1;
 
-  for (const employee of reportWithIterator) {
+  for (const [index, employee] of employeesArray.entries()) {
     employeesString += employee;
-    if (reportWithIterator.indexOf(employee) !== lastIndex) {
+    if (index !== lastIndex) {
       employeesString += ' | ';
     }
   }
