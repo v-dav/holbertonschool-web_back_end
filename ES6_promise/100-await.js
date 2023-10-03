@@ -5,11 +5,15 @@ export default async function asyncUploadUser() {
     photo: null,
     user: null,
   };
-  const photo = await uploadPhoto().then((result) => result);
-  const user = await createUser().then((result) => result);
-  if (photo !== undefined && user !== undefined) {
-    theObject.photo = photo;
-    theObject.user = user;
+  try {
+    const photo = await uploadPhoto().then((result) => result);
+    const user = await createUser().then((result) => result);
+    if (photo !== undefined && user !== undefined) {
+      theObject.photo = photo;
+      theObject.user = user;
+    }
+  } catch (error) {
+    console.log(error);
   }
   return theObject;
 }
