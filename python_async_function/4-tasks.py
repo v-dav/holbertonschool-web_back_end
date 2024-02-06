@@ -9,8 +9,20 @@ task_wait_random = __import__("3-tasks").task_wait_random
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """A function executing multiple coroutines"""
-    task_list = []
+
+    delays_list = []
+
+    async def append_coroutine():
+        """A basic coroutine"""
+        task = task_wait_random(max_delay)
+        await task
+        delays_list.append(task.result())
+
+    tasks = []
     for _ in range(n):
-        task_list.append(task_wait_random(max_delay))
-    results = await asyncio.gather(*task_list)
-    return sorted(results)
+        # Appends coroutines objects but doesn't call the coroutine
+        tasks.append(append_coroutine())
+
+    # Runs all the coroutines concurrently
+    await asyncio.gather(*tasks)
+    return delays_list
