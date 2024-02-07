@@ -2,6 +2,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.9-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/2f6b7eac-cafc-4870-9c03-47a0c5d48eee)
+
 
 ## 🧐 Project Overview
 
