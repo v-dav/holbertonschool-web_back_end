@@ -1,6 +1,7 @@
 # Personal Data
 ![Python](https://img.shields.io/badge/Python-3.7-blue?style=for-the-badge&logo=python&logoColor=white)
 
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/89ee53c4-4fa4-4045-96fb-fe871d81c291)
 
 ## 🧐 Project Overview
 
