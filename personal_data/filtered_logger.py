@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Regex-ing module to obfuscate log messages"""
 
-from typing import List, Tuple
+from typing import List
 import logging
+import mysql.connector
+import os
 import re
 
 
@@ -50,3 +52,15 @@ def get_logger() -> logging.Logger:
     handler.setFormatter(formatter)
     logger.addHandler(handler)
     return logger
+
+
+def get_db() -> mysql.connector.connection.MySQLConnection:
+    """A function that connects to a secure database"""
+    user = os.getenv("PERSONAL_DATA_DB_USERNAME", default="root")
+    password = os.getenv("PERSONAL_DATA_DB_PASSWORD", default="")
+    host = os.getenv("PERSONAL_DATA_DB_HOST", default="localhost")
+    database = os.getenv("PERSONAL_DATA_DB_NAME")
+    return mysql.connector.connection.MySQLConnection(user=user,
+                                                      password=password,
+                                                      host=host,
+                                                      database=database)
