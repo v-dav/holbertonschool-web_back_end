@@ -2,6 +2,7 @@
 """Regex-ing module to obfuscate log messages"""
 
 from typing import List
+import json
 import logging
 import mysql.connector
 import os
@@ -64,3 +65,20 @@ def get_db() -> mysql.connector.connection.MySQLConnection:
                                                       password=password,
                                                       host=host,
                                                       database=database)
+
+
+def main():
+    """Main function used to read and filter data"""
+    logger = get_logger()
+    db = get_db()
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM users")
+    for row in cursor:
+        filtered_row = filter_datum(PII_FIELDS,'***', str(row), ';')
+        logger.info(filtered_row)
+    
+    cursor.close()
+    db.close()
+
+if __name__ == '__main__':
+    main()
