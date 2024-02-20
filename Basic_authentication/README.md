@@ -2,8 +2,9 @@
 ![Python](https://img.shields.io/badge/Python-3.7-blue?style=for-the-badge&logo=python&logoColor=white)
 [![Flask](https://img.shields.io/badge/Flask-1.1.2-blue?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 
-
-![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/69bafc22-f51b-4d20-b099-50a27da6d01b)
+<p align="center">
+  <img src="https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/69bafc22-f51b-4d20-b099-50a27da6d01b" alt="Description de l'image">
+</p>
 
 ## 🧐 Project Overview
 
