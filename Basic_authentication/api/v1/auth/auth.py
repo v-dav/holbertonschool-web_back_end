@@ -13,8 +13,18 @@ class Auth():
     """
 
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
-        """A documentation string for the public method"""
-        return False
+        """A public method that checks if path requieres authorization"""
+        if (path is None or
+            excluded_paths is None or
+            excluded_paths == []):
+            return True
+        
+        if not path.endswith('/'):
+            path = path +'/'
+    
+        if path in excluded_paths:
+            return False
+        return True
 
     def authorization_header(self, request=None) -> str:
         """A public method fo authorization header"""
