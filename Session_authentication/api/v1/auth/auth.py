@@ -37,5 +37,18 @@ class Auth():
         return request.headers['Authorization']
 
     def current_user(self, request=None) -> TypeVar('User'):
-        """A public method current_user"""
-        return None
+        """Overloads Auth and retrieves the User instance for a request:
+        """
+        authorization_header = self.authorization_header(request)
+        base64_authorization_header = self.extract_base64_authorization_header(
+            authorization_header)
+        decoded_b64_auth_header = self.decode_base64_authorization_header(
+            base64_authorization_header)
+        user_credentials = self.extract_user_credentials(
+            decoded_b64_auth_header)
+
+        user = self.user_object_from_credentials(user_credentials[0],
+                                                 user_credentials[1])
+        if user is None:
+            return None
+        return user
