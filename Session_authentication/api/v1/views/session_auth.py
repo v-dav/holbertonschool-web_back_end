@@ -3,7 +3,7 @@
 """
 
 from api.v1.views import app_views
-from flask import jsonify, request
+from flask import abort, jsonify, request
 from models.user import User
 from os import getenv
 
@@ -35,3 +35,13 @@ def session_auth():
     json_user.set_cookie(getenv("SESSION_NAME"), session_id)
 
     return json_user
+
+
+@app_views.route('/api/v1/auth_session/logout',
+                 methods=['DELETE'], strict_slashes=False)
+def logout():
+    from api.v1.app import auth
+    if not auth.destroy_session(request):
+        abort(404)
+    else:
+        return jsonify({}), 200
