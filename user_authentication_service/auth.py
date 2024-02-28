@@ -30,7 +30,7 @@ class Auth:
             user = self._db.add_user(email, hashed_pwd)
             return user
 
-    def valid_login(self, email: str, password: bytes) -> bool:
+    def valid_login(self, email: str, password: str) -> bool:
         """ Credentials validation method"""
         try:
             user = self._db.find_user_by(email=email)
