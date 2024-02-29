@@ -73,7 +73,7 @@ def get_reset_password_token():
     user_email = request.form["email"]
     if user_email is not None:
         try:
-            reset_token = get_reset_password_token(user_email)
+            reset_token = AUTH.get_reset_password_token(user_email)
             return jsonify({"email": user_email,
                             "reset_token": reset_token}), 200
         except ValueError:
