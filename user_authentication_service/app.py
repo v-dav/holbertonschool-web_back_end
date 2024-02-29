@@ -3,7 +3,7 @@
 
 
 from auth import Auth
-from flask import abort, Flask, jsonify, request
+from flask import abort, Flask, jsonify, redirect, request
 app = Flask(__name__)
 
 AUTH = Auth()
@@ -39,6 +39,18 @@ def login():
         return json_response
     else:
         abort(401)
+
+
+@app.route("/sessions", methods=["DELETE"], strict_slashes=False)
+def logout():
+    """A log out route for the app"""
+    session_id = request.cookies.get("session_id")
+    user = AUTH.get_user_from_session_id(session_id)
+    if user is not None:
+        AUTH.destroy_session(user.id)
+        return redirect("/")
+    else:
+        abort(403)
 
 
 if __name__ == "__main__":
