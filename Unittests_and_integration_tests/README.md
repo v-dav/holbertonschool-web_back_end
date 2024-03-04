@@ -1,6 +1,9 @@
 # Unittests and Integration Tests
 
 [![Python](https://img.shields.io/badge/Python-3.9-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/e3c21a46-5f45-4091-b2d1-f7b7a02fa26b)
+<p style="align: center"> Image frome https://pactflow.io/blog/contract-testing-vs-integration-testing/</p>
+
 
 ## 🧐 Project Overview
 The "Unittests and Integration Tests" project is focused on the essential practices of software testing, emphasizing unit tests and integration tests. Understanding the importance of writing tests to ensure the reliability, functionality and maintainability of your code is a fundamental skill for any developer.
