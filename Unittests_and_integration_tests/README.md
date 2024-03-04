@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.9-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 ![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/e3c21a46-5f45-4091-b2d1-f7b7a02fa26b)
-<p style="align: center"> Image frome https://pactflow.io/blog/contract-testing-vs-integration-testing/</p>
+<p align="center"> Image frome https://pactflow.io/blog/contract-testing-vs-integration-testing/</p>
 
 
 ## 🧐 Project Overview
