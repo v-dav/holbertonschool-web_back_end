@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""The basic app module"""
-
+"""
+Basic flask app
+"""
 
 from flask import Flask, render_template
-
 
 app = Flask(__name__)
 
 
-@app.route("/", methods=["GET"], strict_slashes=False)
-def welcome():
-    """The welcome page"""
+@app.route("/")
+def index():
+    """
+    function that render index.html template
+    """
     return render_template("0-index.html")
 
 
