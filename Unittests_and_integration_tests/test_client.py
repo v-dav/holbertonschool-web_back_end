@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """ Unit test Test client
+    Thank you Afine Semi https://github.com/afinesami
 """
 import unittest
 import json
