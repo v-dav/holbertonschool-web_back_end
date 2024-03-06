@@ -5,7 +5,7 @@
 
 ![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/da888271-95cc-4170-aa95-91efd67e96be)
 
-<p>Image from https://tolgee.io/blog/localization-basics-S01E01</p>
+<p align="center">Image from https://tolgee.io/blog/localization-basics-S01E01</p>
 
 ## 🧐 Project Overview:
 Project Overview
