@@ -3,8 +3,12 @@
 ![Python](https://img.shields.io/badge/Python-3.7-blue?style=for-the-badge&logo=python&logoColor=white)
 [![Flask](https://img.shields.io/badge/Flask-1.1.2-blue?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 
-## 🧐 Project Overview:
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/da888271-95cc-4170-aa95-91efd67e96be)
 
+<p align="center">Image from https://tolgee.io/blog/localization-basics-S01E01</p>
+
+## 🧐 Project Overview:
+Project Overview
 This project explores the concept of internationalization (i18n), empowering you to make your web application accessible to a global audience by tailoring it to different languages and locales. Through hands-on experience, you'll gain the expertise to:
 
 * **Craft localized interfaces:** Present user interfaces, including labels, buttons, and messages, in the user's preferred language.
