@@ -2,6 +2,11 @@
 ![Python](https://img.shields.io/badge/Python-3.8.10-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-6-red?style=for-the-badge&logo=redis&logoColor=white)
 
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/9e935dc7-a88c-4863-9899-eb010a4dc191)
+
+<p text-align="center">
+  Image from https://architecturenotes.co/redis/
+</p>
 
 ## 🧐 Project Overview
 In this project, we will learn Redis, a powerful in-memory data structure store used as a database, cache, and message broker. Redis provides high-performance data storage and retrieval, supporting various data structures such as strings, hashes, lists, sets, sorted sets, bitmaps, and hyperloglogs. Throughout this project, we aim to explore the features and capabilities of Redis, understand its use cases, and learn how to integrate it into our applications effectively.
