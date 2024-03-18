@@ -4,7 +4,7 @@
 
 ![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/9e935dc7-a88c-4863-9899-eb010a4dc191)
 
-<p text-align="center">
+<p align="center">
   Image from https://architecturenotes.co/redis/
 </p>
 
