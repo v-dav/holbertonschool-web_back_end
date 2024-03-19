@@ -18,16 +18,15 @@ def cache_results(method: Callable) -> Callable:
         """ A wrapper method"""
         key = 'count:{}'.format(url)
 
-        r.incr(key)
-        result = r.get(key)
+        count = r.get(key)
 
-        if result:
-            return result.decode('utf-8')
+        if count:
+            return count.decode('utf-8')
         else:
-            result = method(url)
-            r.set(key, 0)
-            r.setex(key, 10, result)
-        return result
+            r.incr(key)
+            count = r.get(key)
+            r.setex(key, 10, count)
+            return count.decode('utf-8')
 
     return wrapper
 
