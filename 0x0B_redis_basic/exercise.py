@@ -43,6 +43,37 @@ def call_history(method: Callable) -> Callable:
     return wrapper
 
 
+def replay(function: Callable):
+    """
+    Ouputs the history of calls of a particular function
+    with inputs and outputs
+    """
+    r = redis.Redis()
+    function_name = function.__qualname__
+    nb_of_calls = r.get(function_name)
+
+    try:
+        nb_of_calls = nb_of_calls.decode('utf-8')
+    except Exception:
+        nb_of_calls = 0
+    print(f'{function_name} was called {nb_of_calls} times:')
+
+    inputs = r.lrange(function_name + ":inputs", 0, -1)
+    outputs = r.lrange(function_name + ":outputs", 0, -1)
+
+    for input, output in zip(inputs, outputs):
+        try:
+            input = input.decode("utf-8")
+        except Exception:
+            input = ""
+        try:
+            output = output.decode("utf-8")
+        except Exception:
+            output = ""
+
+        print('{}(*{}) -> {}'.format(function_name, input, output))
+
+
 class Cache():
     """The cache class"""
 
