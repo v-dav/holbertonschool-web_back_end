@@ -17,12 +17,12 @@ def cache_results(method: Callable) -> Callable:
     def wrapper(url):
         """ Wrapper method
         """
-        redis.incr(f"count:{url}")
-        cached_response = redis.get(f"cached:{url}")
+        r.incr(f"count:{url}")
+        cached_response = r.get(f"cached:{url}")
         if cached_response:
             return cached_response.decode('utf-8')
         result = method(url)
-        redis.setex(f"cached:{url}", 10, result)
+        r.setex(f"cached:{url}", 10, result)
         return result
 
     return wrapper
