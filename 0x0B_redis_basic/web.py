@@ -14,15 +14,19 @@ def cache_results(method: Callable) -> Callable:
     with an expiration time using Redis."""
 
     @wraps(method)
-    def wrapper(url):
-        """ Wrapper method
-        """
-        r.incr(f"count:{url}")
-        cached_response = r.get(f"cached:{url}")
-        if cached_response:
-            return cached_response.decode('utf-8')
-        result = method(url)
-        r.setex(f"cached:{url}", 10, result)
+    def wrapper(url: str) -> str:
+        """ A wrapper method"""
+        key = 'count:{}'.format(url)
+
+        r.incr(key)
+        result = r.get(key)
+
+        if result:
+            return result.decode('utf-8')
+        else:
+            result = method(url)
+            r.set(key, 0)
+            r.setex(key, 10, result)
         return result
 
     return wrapper
