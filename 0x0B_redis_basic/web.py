@@ -6,24 +6,24 @@ import requests
 import redis
 from typing import Callable
 
+r = redis.Redis()
+
 
 def cache_results(method: Callable) -> Callable:
     """Decorator to cache the result of a function
     with an expiration time using Redis."""
-    r = redis.Redis()
 
     @wraps(method)
-    def wrapper(url: str) -> str:
-        """ A wrapper method"""
-        key = 'count:{}'.format(url)
-        count = r.get(key)
-
-        if count:
-            r.incr(key)
-        else:
-            r.setex(key, 10, 1)
-
-        return method(url)
+    def wrapper(url):
+        """ Wrapper method
+        """
+        redis.incr(f"count:{url}")
+        cached_response = redis.get(f"cached:{url}")
+        if cached_response:
+            return cached_response.decode('utf-8')
+        result = method(url)
+        redis.setex(f"cached:{url}", 10, result)
+        return result
 
     return wrapper
 
