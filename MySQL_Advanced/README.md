@@ -1,6 +1,9 @@
 # MySQL Advanced
 
-![MySQL Badge](https://img.shields.io/badge/MySQL-Advanced-orange)
+![MySQL Badge](https://img.shields.io/badge/MySQL-5.7-orange)
+
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/0db6d541-61e8-4012-a63b-47bd6a39cb5f)
+
 
 ## 🧐 Project Description:
 
