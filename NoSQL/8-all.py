@@ -7,7 +7,5 @@ def list_all(mongo_collection):
     a mongoDB given collection. If no document in the collection
     returns an empty list"""
 
-    if mongo_collection is not None:
-        return mongo_collection.find()
-    else:
-        return []
+    return [doc for doc in mongo_collection.find()]
+ 
