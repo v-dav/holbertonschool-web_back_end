@@ -6,6 +6,9 @@
 ![Babel](https://img.shields.io/badge/Babel-ES6_Transpiler-orange.svg)
 ![ESLint Linter](https://img.shields.io/badge/ESLint-Linter-red.svg)
 
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/840a2994-7791-4a49-91c9-01eb24615e5f)
+
+
 ## Project Overview
 
 Welcome to the ES6 Promises project! In this project, you will dive into the world of ES6 Promises, a powerful feature in modern JavaScript for handling asynchronous operations. You will learn the ins and outs of Promises, including how, why, and when to use them. Additionally, you will explore the use of `then`, `resolve`, `catch`, and other methods of the Promise object, as well as the `await` operator and async functions. By the end of this project, you will have a solid understanding of Promises and be equipped to work with asynchronous code like a pro.
