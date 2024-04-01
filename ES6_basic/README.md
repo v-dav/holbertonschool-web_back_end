@@ -5,6 +5,9 @@
 ![Babel](https://img.shields.io/badge/Babel-ES6_Transpiler-orange.svg)
 ![ESLint Linter](https://img.shields.io/badge/ESLint-Linter-red.svg)
 
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/60400fe8-3c72-4b44-ab6b-523ec1127012)
+
+
 ## Project Overview
 
 Welcome to the ECMAScript 6 (ES6) Concepts project! In this project, you will dive into the world of ES6, also known as ECMAScript 2015, and explore its new features and concepts. ES6 introduced significant changes and improvements to JavaScript, and this project will help you understand them. You will learn about block-scoped variables, arrow functions, default parameters, rest and spread function parameters, string templating, object creation, iterators, and for-of loops.
