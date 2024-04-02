@@ -6,6 +6,9 @@
 ![Mocha](https://img.shields.io/badge/Mocha-Testing_Framework-brightgreen.svg)
 ![Nodemon](https://img.shields.io/badge/Nodemon-Development_Tool-orange.svg)
 
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/fd09feaa-eea5-4dfa-8f03-6c54ea45b3f3)
+
+
 ## 🧐 Project Overview
 
 Welcome to the NodeJS Basics project! This project is designed to help you build a strong foundation in Node.js, one of the most popular and powerful JavaScript runtime environments. Node.js allows you to run JavaScript on the server side, opening up a world of possibilities for building web applications, APIs, and more.
