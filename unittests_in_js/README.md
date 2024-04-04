@@ -5,7 +5,8 @@
 ![Express](https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white)
 ![Sinon](https://img.shields.io/badge/-Sinon-C53635?style=flat-square&logo=sinon.js&logoColor=white)
 
----
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/55c2c72d-26d9-4aef-ad3b-3ec5b56e945f)
+
 
 ## 🧐 Project Description:
 
@@ -363,7 +364,7 @@ In this example:
 
 Stubs provide a flexible way to control the behavior of dependencies during tests, allowing you to simulate different scenarios and isolate the code under test. However, it's essential to use stubs judiciously and avoid overuse, as excessive stubbing can make tests less reliable and harder to maintain.
 
-# 🪝 Hooks
+## 🪝 Hooks
 
 Hooks are functions provided by testing frameworks like Mocha or Jest that allow you to run code before or after tests or test suites. They are useful for setting up test fixtures, tearing down resources, or performing common setup and cleanup tasks.
 
@@ -426,7 +427,7 @@ describe('Example Test Suite', function() {
 
 Hooks provide a way to manage the lifecycle of your tests and ensure that setup and teardown tasks are performed consistently. They help in writing clean, maintainable test code by reducing duplication and ensuring that tests run in a predictable environment.
 
-## Unit testing with async functions
+## ☝️ Unit testing with async functions
 
 Unit testing with async functions involves testing functions that return promises or use asynchronous operations like callbacks. There are a few key considerations and techniques to keep in mind when unit testing async functions:
 
@@ -517,7 +518,7 @@ In this example:
 - We use `async/await` syntax to handle async operations and wait for promises to resolve or reject.
 - We write tests to verify that the async function behaves correctly under different conditions, including successful data retrieval and error handling.
 
-## How to write integration tests with a small node server
+## ✍️ How to write integration tests with a small node server
 
 Writing integration tests for a small Node.js server involves testing the interaction between different parts of your server, including routes, controllers, and database operations. Here's a step-by-step guide on how to write integration tests for a small Node.js server using a testing framework like Mocha along with libraries like Supertest and a database library (e.g., SQLite for simplicity):
 
