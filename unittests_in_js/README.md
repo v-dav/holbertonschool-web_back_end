@@ -31,7 +31,7 @@ To deepen your understanding of unit testing in JavaScript, refer to the followi
   - [Express documentation](https://expressjs.com/)
   - [Request documentation](https://www.npmjs.com/package/request)
 
-## 🍵 Mocha
+# 🍵 Mocha
 Mocha is a popular testing framework for JavaScript, often used in conjunction with other libraries like Chai for assertions. Here's a simple guide on how to write a test suite using Mocha with some basic examples:
 
 ### Step 1: Installation
@@ -100,7 +100,7 @@ Mocha will look for test files in the `test/` directory and execute them. You'll
 
 That's it! You've created a simple test suite using Mocha with some basic examples. You can extend this setup by adding more test cases and using other features provided by Mocha and assertion libraries like Chai.
 
-## ☕️ Chai
+# ☕️ Chai
 Chai is an assertion library that works very well with Mocha, providing a more expressive way to write assertions compared to Node.js's built-in `assert` module. Here's how you can use Chai with Mocha, continuing with the previous example:
 
 ### Step 1: Installation
@@ -155,7 +155,7 @@ mocha
 Chai provides a more fluent and expressive way to write assertions in your tests compared to Node.js's built-in `assert` module. By combining Chai with Mocha, you can create more readable and maintainable test suites for your JavaScript code.
 
 
-## 🚀 How to present long test suites
+# 🚀 How to present long test suites
 Presenting long test suites effectively is crucial for maintaining readability and understanding. Here are some strategies to accomplish this:
 
 ### 1. Grouping Tests
@@ -228,7 +228,7 @@ describe('Database Operations', function() {
 
 By following these strategies, you can present long test suites in a structured and understandable manner, facilitating easier maintenance, debugging, and collaboration within your development team.
 
-## 🕵️‍♂️ Spies
+# 🕵️‍♂️ Spies
 Spies are a testing utility provided by libraries like Sinon.js, Jasmine, or Jest. They allow you to observe the behavior of functions, such as whether they were called, with what arguments, and how many times. Spies are particularly useful when you want to test interactions between different parts of your code or verify that certain functions are being called as expected.
 
 ### When to use spies:
@@ -364,7 +364,7 @@ In this example:
 
 Stubs provide a flexible way to control the behavior of dependencies during tests, allowing you to simulate different scenarios and isolate the code under test. However, it's essential to use stubs judiciously and avoid overuse, as excessive stubbing can make tests less reliable and harder to maintain.
 
-## 🪝 Hooks
+# 🪝 Hooks
 
 Hooks are functions provided by testing frameworks like Mocha or Jest that allow you to run code before or after tests or test suites. They are useful for setting up test fixtures, tearing down resources, or performing common setup and cleanup tasks.
 
@@ -427,7 +427,7 @@ describe('Example Test Suite', function() {
 
 Hooks provide a way to manage the lifecycle of your tests and ensure that setup and teardown tasks are performed consistently. They help in writing clean, maintainable test code by reducing duplication and ensuring that tests run in a predictable environment.
 
-## ☝️ Unit testing with async functions
+# ☝️ Unit testing with async functions
 
 Unit testing with async functions involves testing functions that return promises or use asynchronous operations like callbacks. There are a few key considerations and techniques to keep in mind when unit testing async functions:
 
@@ -518,7 +518,7 @@ In this example:
 - We use `async/await` syntax to handle async operations and wait for promises to resolve or reject.
 - We write tests to verify that the async function behaves correctly under different conditions, including successful data retrieval and error handling.
 
-## ✍️ How to write integration tests with a small node server
+# ✍️ How to write integration tests with a small node server
 
 Writing integration tests for a small Node.js server involves testing the interaction between different parts of your server, including routes, controllers, and database operations. Here's a step-by-step guide on how to write integration tests for a small Node.js server using a testing framework like Mocha along with libraries like Supertest and a database library (e.g., SQLite for simplicity):
 
