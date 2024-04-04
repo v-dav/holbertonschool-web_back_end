@@ -11,7 +11,7 @@ function calculateNumber(type, a, b) {
   else if (type === 'DIVIDE') {
     if (roundedB === 0) { return 'Error' }
     return roundedA / roundedB
-   }
+  }
 }
 
 module.exports = calculateNumber;
