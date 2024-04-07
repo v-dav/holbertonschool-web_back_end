@@ -3,9 +3,10 @@ const sinon = require('sinon');
 const sendPaymentRequestToApi = require('./5-payment.js');
 
 describe('sendPaymentRequestToApi', function () {
+  let consoleLogSpy;
 
   beforeEach(function () {
-    const consoleLogSpy = sinon.spy(console, 'log');
+    consoleLogSpy = sinon.spy(console, 'log');
   })
 
   afterEach(function () {
