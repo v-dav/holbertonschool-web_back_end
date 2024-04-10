@@ -866,3 +866,36 @@ class Book {
 	}
 }
 ```
+
+## Itérateur et itérable
+
+[How to Create Custom Iterators and Iterables in JavaScript ? - GeeksforGeeks](https://www.geeksforgeeks.org/how-to-create-custom-iterators-and-iterables-in-javascript/)
+
+Les termes "itérateur" et "itérable" sont étroitement liés, mais ils ont des rôles différents dans le contexte de la programmation en JavaScript.
+
+1. **Itérable :** Un objet JavaScript est considéré comme "itérable" s'il possède une méthode spéciale appelée `[Symbol.iterator]` (un symbole) qui renvoie un itérateur. En d'autres termes, un itérable est un objet qui peut être parcouru séquentiellement, généralement avec une boucle `for...of`. Les tableaux, les chaînes de caractères et les ensembles sont des exemples d'itérables intégrés à JavaScript.
+2. **Itérateur :** Un "itérateur" est un objet qui gère l'état de l'itération sur un itérable. Cet objet a une méthode `next()` qui renvoie l'élément suivant dans la séquence d'itération. L'itérateur garde une trace de l'endroit où vous en êtes dans l'itération et décide quand l'itération est terminée. L'itérateur est généralement créé par l'itérable lorsqu'on appelle `[Symbol.iterator]()` sur l'itérable.
+
+<aside>
+⭐ Donc c’est un objet itérable est un objet qui possède une méthode ([Symbol.iterator]) qui renvoie un objet itérateur qui possède une mèthode (next()) qui renvoie l’élement suivant dans la séquence d’itération
+
+</aside>
+
+Pour simplifier :
+
+- Un **itérable** est un conteneur de données que vous pouvez parcourir séquentiellement avec une boucle `for...of`.
+- Un **itérateur** est un objet qui gère l'itération de l'itérable en gardant une trace de la position actuelle et en fournissant la prochaine valeur lorsque `next()` est appelé.
+
+Lorsque vous utilisez une boucle `for...of` sur un itérable, JavaScript gère en interne la création de l'itérateur à partir de l'itérable (en appelant `[Symbol.iterator]()` sur l'itérable), puis utilise cet itérateur pour itérer sur les éléments de l'itérable. Cela simplifie l'itération pour vous en masquant la complexité de gestion de l'itérateur, sauf si vous avez besoin d'une personnalisation spécifique.
+
+## Symbols
+
+[The Complete Guide to JS Symbols ES6](https://www.youtube.com/watch?v=4J5hnOCj69w)
+
+- Ce sont des identifiants uniques; valeurs uniques
+- Se déclarent ainsi Symbol() ou Symbol(”quoiquecesoit”) mais le mot à l’intérieur est juste une étiquette, label et même si les deux symbole portent la même étiquette ils ne seront jamais les mêmes
+- Leur utilisaiton principale = as identifiers in object properties
+
+## Typed Arrays
+
+[Intro to Typed Arrays in JavaScript](https://www.youtube.com/watch?v=UYkJaW3pmj0)
