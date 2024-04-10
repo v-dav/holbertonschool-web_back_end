@@ -188,6 +188,7 @@ Don’t forget to run `$ npm install` when you have the `package.json`.
 # Personal Notes about NodeJS, ExpressJS and Next.JS
 ![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/ff772fe7-0b38-4372-96d4-22af2b779943)
 
+## Definition
 Node.js, Express.js, and Next.js are all JavaScript-based technologies, but they serve different purposes and are used in different contexts.
 
 1. **Node.js:**
@@ -210,3 +211,65 @@ Node.js, Express.js, and Next.js are all JavaScript-based technologies, but they
         - Automatic code splitting: Next.js automatically splits your JavaScript code into smaller chunks to optimize loading times.
 
 In summary, Node.js is the runtime environment, Express.js is a web application framework built on top of Node.js, and Next.js is a React-based framework that extends React's capabilities to support server-side rendering and static site generation. They can be used together in a stack to build scalable and performant web applications.
+
+## How create basic simple HTTP server
+
+To create a basic HTTP server using Node.js, you can use the built-in `http` module. Here's a step-by-step guide to creating a simple HTTP server:
+
+1. **Import the `http` module:**
+Begin by importing the `http` module using the `require()` function. This module is built into Node.js and provides the functionality needed to create an HTTP server.
+    
+    ```jsx
+    const http = require('http');
+    
+    ```
+    
+2. **Create the server:**
+Use the `http.createServer()` method to create an HTTP server. This method takes a callback function that will be called for each incoming HTTP request. The callback function receives two arguments: a request object (`req`) and a response object (`res`) that you can use to handle the request and send a response.
+    
+    ```jsx
+    const server = http.createServer((req, res) => {
+      // Your code to handle the request and send a response goes here
+    });
+    
+    ```
+    
+3. **Define how the server responds to requests:**
+Inside the callback function, you can define how your server responds to incoming HTTP requests. For example, you can set response headers, send a response body, or handle different HTTP methods (GET, POST, etc.).
+    
+    Here's a simple example that responds with "Hello, World!" for all incoming requests:
+    
+    ```jsx
+    const server = http.createServer((req, res) => {
+      // Set the response header
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+    
+      // Send the response body
+      res.end('Hello, World!\\n');
+    });
+    
+    ```
+    
+4. **Start the server:**
+To start the server and make it listen for incoming requests, use the `listen()` method. Specify the port number on which the server should listen and an optional callback function that is executed when the server starts.
+    
+    ```jsx
+    const port = 3000;
+    server.listen(port, () => {
+      console.log(`Server is listening on port ${port}`);
+    });
+    
+    ```
+    
+5. **Run your Node.js script:**
+Save your script to a file, for example, `server.js`, and then run it using Node.js from your terminal or command prompt:
+    
+    ```bash
+    node server.js
+    
+    ```
+    
+    Your server will start and listen on the specified port (in this case, port 3000).
+    
+
+That's it! You've created a basic HTTP server using Node.js. You can access it in your web browser or make HTTP requests to it using tools like `curl` or Postman.
