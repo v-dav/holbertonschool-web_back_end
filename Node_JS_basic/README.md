@@ -182,3 +182,31 @@ Don’t forget to run `$ npm install` when you have the `package.json`.
 ## 🙇 Author
 
 - [Vladimir Davidov](https://github.com/v-dav)
+
+---
+
+# Personal Notes about NodeJS, ExpressJS and Next.JS
+![image](https://github.com/v-dav/holbertonschool-web_back_end/assets/115344057/ff772fe7-0b38-4372-96d4-22af2b779943)
+
+Node.js, Express.js, and Next.js are all JavaScript-based technologies, but they serve different purposes and are used in different contexts.
+
+1. **Node.js:**
+    - **Definition:** Node.js is a runtime environment that allows you to execute JavaScript code on the server side. It is built on the V8 JavaScript runtime and provides a set of APIs for building scalable and high-performance network applications.
+    - **Key Features:**
+        - Asynchronous and event-driven: Node.js is designed to handle asynchronous I/O operations, making it suitable for building scalable and real-time applications.
+        - Single-threaded, non-blocking: It uses a single-threaded event loop to handle multiple concurrent connections without the need for multi-threading.
+        - Cross-platform: Node.js is compatible with various operating systems, allowing developers to use JavaScript to build server-side applications.
+2. **Express.js:**
+    - **Definition:** Express.js is a web application framework for Node.js. It simplifies the process of building web applications and APIs by providing a set of robust features and middleware. Express.js is not a separate technology but rather a framework that runs on top of Node.js.
+    - **Key Features:**
+        - Routing: Allows you to define routes for handling HTTP requests and responses.
+        - Middleware: Offers a range of middleware modules to handle various tasks such as authentication, logging, and error handling.
+        - Template engines: Supports the use of template engines like EJS or Handlebars for rendering dynamic content.
+3. **Next.js:**
+    - **Definition:** Next.js is a React-based framework used for building modern web applications. While React is primarily focused on the client side, Next.js extends its capabilities to support server-side rendering (SSR) and static site generation (SSG).
+    - **Key Features:**
+        - Server-side rendering: Provides the ability to render React components on the server side before sending them to the client, improving performance and SEO.
+        - Static site generation: Allows you to pre-render pages at build time, resulting in static HTML files that can be served quickly.
+        - Automatic code splitting: Next.js automatically splits your JavaScript code into smaller chunks to optimize loading times.
+
+In summary, Node.js is the runtime environment, Express.js is a web application framework built on top of Node.js, and Next.js is a React-based framework that extends React's capabilities to support server-side rendering and static site generation. They can be used together in a stack to build scalable and performant web applications.
