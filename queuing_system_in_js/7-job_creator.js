@@ -61,6 +61,6 @@ for (const job of jobs) {
         console.log(`Notification job created: ${newJob.id}`);
       }
     });
-  newJob.on('complete', () => console.log(`Notification job ${job.id} completed`));
-  newJob.on('progress', (progress) => console.log(`Notification job ${job.id} ${progress}% complete`));
+  newJob.on('complete', () => console.log(`Notification job ${newJob.id} completed`));
+  newJob.on('progress', (progress) => console.log(`Notification job ${newJob.id} ${progress}% complete`));
 }
